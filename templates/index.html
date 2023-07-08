@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<style>
+    body {
+      background-image: url("static/images/space.gif");
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: 100% ;
+      font-family: 'Courier New', monospace;
+      color: white;
+    }
+    h1 {
+      text-align: center;
+      font-size: 40px;
+    }
+    p {
+      text-align: center;
+      font-size: 40px;
+      font-family: 'Courier New', monospace;
+    }
+    button {
+      text-align: center;
+      font-size: 30px;
+    }
+</style>
+<body>
+    <br>
+    <h1> Welcome to the Millennium falcon C3PO system </h1>
+    <br>
+    <h1>Get the odds to save the galaxy!</h1>
+    <br>
+    <form method='POST' enctype='multipart/form-data'>
+        {{form.hidden_tag()}}
+        <p> {{form.file()}}
+            {{form.submit()}} </p>
+        <br>
+        <p> {{best_odds}} </p>
+    </form>
+    <br>
+    <p> <button onclick="getElementById('route').innerHTML='{{best_route}}'"> Here the best route with day info </button> </p>
+    <p id='route'></p>
+</body>
+</html>
